@@ -1,0 +1,14 @@
+{
+  "superman": {
+    "user_id" : "1",
+    "first_name" : "Clark",
+    "last_name" : "Kent",
+    "watching" : [ "spiderman" ]
+  },
+  "spiderman" : {
+    "user_id" : "2",
+    "first_name" : "Peter",
+    "last_name" : "Parker",
+    "watching" : [ "superman" ]
+  }
+}

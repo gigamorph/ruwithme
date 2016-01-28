@@ -1,0 +1,18 @@
+{
+  "loc1" : "BUILDING 5, FlOOR NO.2",
+  "loc2" : "ROOM NO. 212",
+  "appointments" : [
+    {
+      "title" : "INFUSION APPOINTMENT",
+      "in_progress" : false,
+      "time" : "2:00 PM",
+      "location" : "Building 1, Floor No. 2"
+    },
+    {
+      "title" : "DIAGNOSTIC APPOINTMENT",
+      "in_progress" : false,
+      "time" : "5:00 PM",
+      "location" : "Radiology Department"
+    }
+  ]
+}

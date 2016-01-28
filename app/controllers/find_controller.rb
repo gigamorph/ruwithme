@@ -1,0 +1,3 @@
+class FindController < ApplicationController
+
+end

@@ -1,0 +1,24 @@
+<div class="ui container">
+  <div class="header-bar" style="margin-bottom: 25px; margin-top: 10px">
+    <h1>Login</h1>
+  </div>
+  <div class="ui centered grid">
+    <%= form_tag('/login/auth', method: :post) do %>
+      <div class="sixteen wide mobile column">
+        <div class="ui input">
+          <input name="p[username]" type="text" placeholder="Username"></input>
+        </div>
+      </div>
+      <div class="sixteen wide mobile column">
+        <div class="ui input">
+          <input name="p[password]" type="password" placeholder="Password"></input>
+        </div>
+      </div>
+      <div class="sixteen wide mobile column" style="margin-top: 25px">
+        <button type="submit" class="ui primary button">
+          Login
+        </button>
+      </div>
+    <% end %>
+  </div>
+</div>

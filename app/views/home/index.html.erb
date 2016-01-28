@@ -1,0 +1,25 @@
+<div class="ui container">
+  <div class="header-bar">
+    <h1>Home</h1>
+    <div class='sk-item-right'>
+      <%= image_tag('notification.png', size: '30x30', style: 'vertical-align: -10px') %>
+      <button class="ui button" style="border-radius: 1.5rem"><%= @initial %></button>
+    </div>
+  </div>
+
+  <div class="ui grid">
+    <div class="eight wide mobile column">
+      <a href="/timeline/<%= @user['user_id'] %>">
+        <button class="ui button">Me</button>
+      </a>
+    </div>
+    <% @watching.each do |username| %>
+      <% person = @users[username] %>
+      <div class="eight wide mobile column">
+        <a href="/timeline/<%= person['user_id'] %>">
+          <button class="ui button"><%= person['first_name'] %></button>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

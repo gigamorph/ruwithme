@@ -1,0 +1,71 @@
+<div class="ui container">
+  <div class="header-bar">
+    <h1>Timeline</h1>
+    <div class='sk-item-right'>
+      <%= image_tag('notification.png', size: '33x33', align: 'center', style: 'vertical-align: -10px') %>
+      <button class="ui button" style="border-radius: 1.5rem"><%= @initial %></button>
+    </div>
+  </div>
+  <div class="ui grid">
+    <div class="sixteen wide mobile column">
+      <div class="sk-patient-header">
+        <%= image_tag('person.png', size: '45x45', class: 'sk-portrait', style: 'float: left') %>
+        <div style="display: inline-block; margin-top: 6px;">
+          <span class="sk-name-label">PATIENT NAME<br/>
+          <span class="sk-name"><%= @patient['first_name'] %></span>
+        </div>
+      </div>
+    </div>
+      <div class="sk-header">PATIENT ROOM</div>
+      <div class="sk-timeline-item">
+        <div class="sk-item-summary <%= @data['in_room'] ? 'sk-in-room' : 'sk-out-room' %>">
+          <%= @data['loc1'] %><br/>
+          <%= @data['loc2'] %>
+        </div>
+        <div class="sk-item-detail">
+        </div>
+        <div class="sk-item-help">
+          <p>
+          If the color above is blue you are most likely to find
+          <%= @patient['first_name'] %> in his room. If it's orange, you should check
+          below to see what time they might be back.
+          </p>
+          <p>
+            <span class="map-address">212 Howard St. New Haven, CT</span>
+          </p>
+        </div>
+      </div>
+      <% @appointments.each do |appt| %>
+        <div class="sk-timeline-item">
+          <div class="sk-item-summary">
+            <p>
+              <%= appt['title'] %><br/>
+              <%= appt['location'] %>
+              <div class="sk-item-right">
+                <%= appt['time'] %>
+              </div>
+            </p>
+            <% if appt['in_progress'] %>
+              <%= image_tag('progress.png', size: '50x10') %>
+              in progress
+            <% end %>
+          </div>
+          <div class="sk-item-detail">
+          </div>
+          <% if appt['help'] %>
+          <div class="sk-item-help">
+            <p>
+              <%= appt['help'] %>
+            </p>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+        <div class="sk-timeline-item">
+          <div class="sk-item-summary sk-end">
+            VISITING HOURS END <div class="sk-item-right">8:00 PM</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

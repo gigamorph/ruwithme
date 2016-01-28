@@ -1,0 +1,20 @@
+{
+  "loc1" : "BUILDING 1, FlOOR NO.4",
+  "loc2" : "ROOM NO. 102",
+  "in_room" : true,
+  "appointments" : [
+    {
+      "title" : "INFUSION APPOINTMENT",
+      "in_progress" : true,
+      "time" : "10:00 AM - 2:00 PM",
+      "location" : "Building 1, Floor No. 2",
+      "help" : "This visit should approximately take 4 hours. This is not a good time to visit."
+    },
+    {
+      "title" : "DIAGNOSTIC APPOINTMENT",
+      "in_progress" : false,
+      "time" : "5:00 PM",
+      "location" : "Radiology Department"
+    }
+  ]
+}
