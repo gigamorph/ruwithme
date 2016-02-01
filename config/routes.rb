@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -59,7 +60,7 @@ Rails.application.routes.draw do
 
   get '/home', to: 'home#index'
 
-  get '/timeline/:user_id', to: 'timeline#index'
+  get '/timeline/:username', to: 'timeline#index'
 
   get '/find', to: 'find#index'
 

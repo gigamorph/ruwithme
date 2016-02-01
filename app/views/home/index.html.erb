@@ -9,15 +9,14 @@
 
   <div class="ui grid">
     <div class="eight wide mobile column">
-      <a href="/timeline/<%= @user['user_id'] %>">
+      <a href="/timeline/<%= @user.username %>">
         <button class="ui button">Me</button>
       </a>
     </div>
-    <% @watching.each do |username| %>
-      <% person = @users[username] %>
+    <% @tracked_users.each do |tracked_user| %>
       <div class="eight wide mobile column">
-        <a href="/timeline/<%= person['user_id'] %>">
-          <button class="ui button"><%= person['first_name'] %></button>
+        <a href="/timeline/<%= tracked_user.username %>">
+          <button class="ui button"><%= tracked_user.first_name %></button>
         </a>
       </div>
     <% end %>

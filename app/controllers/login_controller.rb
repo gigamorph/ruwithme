@@ -4,13 +4,12 @@ class LoginController < ApplicationController
   end
 
   def auth
-    json = File.read(File.join(Rails.public_path + "mock/users.json"))
-    users = JSON.parse(json)
-
     username = params['p']['username']
     #pw = params['p']['password']
 
-    if users[username]
+    user = User.find_by(username: username)
+
+    if user
       session[:username] = username
       redirect_to '/home'
     else

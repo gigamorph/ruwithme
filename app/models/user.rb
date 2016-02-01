@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :watched, :class_name => "User", :foreign_key => "watcher_id"
-  belongs_to :watcher, :class_name => "User", :foreign_key => "watcher_id"
+  has_many :tracking_relations, class_name: 'Tracking', foreign_key: :tracker_id
+  has_many :tracked_relations, class_name: 'Tracking', foreign_key: :tracked_user_id
+  has_many :tracked_users, class_name: 'User', through: :tracking_relations
+  has_many :trackers, class_name: 'User', through: :tracked_relations
 end

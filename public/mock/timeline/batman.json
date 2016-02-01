@@ -1,0 +1,26 @@
+{
+  "loc1" : "BUILDING 1, FlOOR NO.2",
+  "loc2" : "ROOM NO. 114",
+  "in_room" : true,
+  "appointments" : [
+    {
+      "title" : "APPOINTMENT #1",
+      "in_progress" : true,
+      "time" : "11:00 AM - 1:00 PM",
+      "location" : "Building 3, Floor NO.5",
+      "help" : "This visit should approximately take 2 hours. This is not a good time to visit."
+    },
+    {
+      "title" : "DIAGNOSTIC APPOINTMENT",
+      "in_progress" : false,
+      "time" : "2:00 PM",
+      "location" : "Lab #2"
+    },
+    {
+      "title" : "APPOINTMENT #2",
+      "in_progress" : false,
+      "time" : "4:15 PM",
+      "location" : "Building 1, Floor NO.2"
+    }
+  ]
+}

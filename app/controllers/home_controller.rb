@@ -8,10 +8,8 @@ class HomeController < ApplicationController
   end
 
   def index
-    json = File.read(File.join(Rails.public_path + "mock/users.json"))
-    @users = JSON.parse(json)
-    @user = @users[session[:username]]
-    @watching = @user['watching']
-    @initial = @user['first_name'][0] + @user['last_name'][0]
+    @user = User.find_by(username: session[:username])
+    @tracked_users = @user.tracked_users
+    @initial = @user.first_name[0] + @user.last_name[0]
   end
 end
