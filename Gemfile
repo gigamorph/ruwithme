@@ -39,8 +39,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'yui-compressor'
 
 gem 'less-rails-semantic_ui'
-
 gem 'autoprefixer-rails'
+
 gem 'therubyracer', group: :production
 
 gem 'rails_12factor', group: :production

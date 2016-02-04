@@ -65,6 +65,7 @@ Rails.application.routes.draw do
   get '/find', to: 'find#index'
 
   get '/login', to: 'login#index'
+  get '/logout', to: 'application#logout'
 
   post '/login/auth', to: 'login#auth'
 end

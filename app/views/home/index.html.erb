@@ -1,12 +1,4 @@
 <div class="ui container">
-  <div class="header-bar">
-    <h1>Home</h1>
-    <div class='sk-item-right'>
-      <%= image_tag('notification.png', size: '30x30', style: 'vertical-align: -10px') %>
-      <button class="ui button" style="border-radius: 1.5rem"><%= @initial %></button>
-    </div>
-  </div>
-
   <div class="ui grid">
     <div class="eight wide mobile column">
       <a href="/timeline/<%= @user.username %>">

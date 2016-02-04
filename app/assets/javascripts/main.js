@@ -1,4 +1,4 @@
-window.sk = {};
+window.ru = {};
 
 (function (root) {
 
@@ -6,6 +6,7 @@ window.sk = {};
 
   $(document).ready(function () {
     genMapLinks();
+    $('.dropdown').dropdown();
    });
 
   function genMapLinks() {
@@ -22,4 +23,4 @@ window.sk = {};
     });
   }
 
-})(sk);
+})(ru);
